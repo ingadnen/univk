@@ -85,20 +85,7 @@ class JitsiComponent extends Component {
     }
 
     // custom events
-    executeCommand(command) {
-        this.api.executeCommand(command);;
-        if(command == 'hangup') {
-            return this.props.history.push('/thank-you');
-        }
-
-        if(command == 'toggleAudio') {
-            this.setState({ isAudioMuted: !this.state.isAudioMuted });
-        }
-
-        if(command == 'toggleVideo') {
-            this.setState({ isVideoMuted: !this.state.isVideoMuted });
-        }
-    }
+   
 
     componentDidMount() {
         if (window.JitsiMeetExternalAPI) {
